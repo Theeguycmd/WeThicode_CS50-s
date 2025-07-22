@@ -18,19 +18,26 @@ def is_valid(s):
             continue
 
     if len(s) >= 2 and len(s) <= 6:
-        letters = letters + s[0:2]
-        for j in s[2::]:
-            if j.isnumeric():
-                numbers = numbers + j
-            else:
-                letters = letters + j
-        if int(numbers[0]) == 0:
+        if len(s) == 2 and s[0].isnumeric() == False and s[1].isnumeric() == False:
+            return True
+        elif len(s) == 2 and s[0].isnumeric() == True:
+            return False
+        elif len(s) == 2 and s[1].isnumeric() == True:
             return False
         else:
-            if letters + numbers == s:
-                return True
-            else:
+            letters = letters + s[0:2]
+            for j in s[2::]:
+                if j.isnumeric():
+                    numbers = numbers + j
+                else:
+                    letters = letters + j
+            if int(numbers[0]) == 0:
                 return False
+            else:
+                if letters + numbers == s:
+                    return True
+                else:
+                    return False
     else:
         return False
 
