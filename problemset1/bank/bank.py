@@ -1,11 +1,18 @@
 def main():                                                                      
-        answer = input("Greeting: ").strip().lower()
-        array = answer.split()
+    answer = input("Greeting: ").strip().lower()
+    print(f"$ {value(answer)}")
 
-        if array[0] == "hello":
-                print("$0")
-        elif array[0][0] == "h":
-                print("$20")
-        else:
-                print("$100")
-main()
+
+def value(greeting):
+    array = greeting.split()
+
+    if array[0] == "hello":
+        return 0
+    elif array[0][0] == "h":
+        return 20
+    else:
+        return 100
+
+
+if __name__ == "__main__":
+    main()

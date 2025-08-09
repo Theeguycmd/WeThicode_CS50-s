@@ -1,20 +1,38 @@
 def main():
     while True:
-        something = input("Fraction: ")
-        if "/" in something:
-            num1, num2 = something.split("/")
-            if int(num1) <= int(num2):
-                try:
-                    sum = (int(num1) / int(num2)) * 100
-                except (ValueError, ZeroDivisionError):
-                    pass
-                else:
-                    if sum == 100:
-                        print("F")
-                    elif sum == 0:
-                        print("E")
-                    else:
-                        print(f"{int(sum)}%")
-                    break
+        check = convert(input("Fraction: "))
+        if check == "Error":
+            continue
+        else:
+            print(gauge(check))
+            break
 
-main()
+
+def convert(fraction):
+    if "/" in fraction:
+        try:
+            sum = (int(fraction.split("/")[0]) / int(fraction.split("/")[1])) * 100
+        except (ValueError, ZeroDivisionError):
+            return "Error"
+        else:
+            if sum  <= 100 and sum >= 0:
+                return int(sum)
+            else:
+                return "Error"
+    else:
+        return "Error"
+
+
+
+
+def gauge(percent):
+    if percent == 100 or percent == 99:
+        return "F"
+    elif percent == 0 or percent == 1:
+        return "E"
+    else:
+        return f"{percent}%"
+
+
+if __name__ == "__main__":
+    main()

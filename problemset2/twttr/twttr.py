@@ -1,12 +1,14 @@
 def main():
+    print(shorten(input("Inpuut: ")))
+
+
+def shorten(word):
     vowels = ["a", "e", "i", "o", "u"]
-    userInput = input("Input: ")
     for vowel in vowels:
-        if vowel in userInput or vowel.upper() in userInput:
-            userInput = userInput.replace(vowel, "")
-            userInput = userInput.replace(vowel.upper(), "")
+        if vowel in word or vowel.upper() in word:
+            word = word.replace(vowel, "")
+            word = word.replace(vowel.upper(), "")
+    return word
 
-    print(userInput)
-
-
-main()
+if __name__ == "__main__":
+    main()

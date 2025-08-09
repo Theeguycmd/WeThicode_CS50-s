@@ -31,15 +31,18 @@ def is_valid(s):
                     numbers = numbers + j
                 else:
                     letters = letters + j
-            if int(numbers[0]) == 0:
-                return False
-            else:
-                if letters + numbers == s:
-                    return True
-                else:
+            if len(numbers) > 0:
+                if int(numbers[0]) == 0:
                     return False
+                else:
+                    if letters + numbers == s:
+                        return True
+                    else:
+                        return False
+            else:
+                return True
     else:
         return False
 
-
-main()
+if __name__ == "__main__":
+    main()
