@@ -1,10 +1,13 @@
 def main():
-        words = input("")
-        something = convert(words)
-        print(something)
+    words = input("")
+    something = convert(words)
+    print(something)
 
 
 def convert(str):
-        return str.replace(":)", "🙂").replace(":(", "🙁")
+    return str.replace(":)", "🙂").replace(":(", "🙁")
 
-main()
+
+
+if __name__ == "__main__":
+    main()
