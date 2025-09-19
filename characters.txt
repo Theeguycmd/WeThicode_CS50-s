@@ -1,0 +1,5 @@
+Luna Lovegood,Ravenclaw,Insightful,Easily Distracted
+Dean Thomas,Gryffindor,Resourceful,Doubts Himself
+Maisie Flint,Slytherin,Ambitious,Trust Issues
+Elijah Bramble,Hufflepuff,Loyal to Friends,Slow to Decide
+Harry Potter,Gryffindor,Courage,Recklessness

@@ -4,7 +4,7 @@ import sys
 class Go:
     @classmethod
     def go(cls, direction):
-        return room.Room.getRooms().get(room.Room.exit(direction)))
+        return room.Room.getRooms().get(room.Room.exit(direction))) #returns a room object
 
 class Look:
     @classmethod
@@ -13,8 +13,8 @@ class Look:
 
 class Take:
     @classmethod
-    def takeItem(cls, itemName, playerObject):
-        return room.Room.take(itemName, playerObject)
+    def takeItem(cls, itemName):
+        return room.Room.take(itemName)
 
 class Help:
     @classmethod

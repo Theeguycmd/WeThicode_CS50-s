@@ -13,14 +13,22 @@ class Room:
         ite = f"Visible items: {self.items}"
         return des + exi + ite
 
+    @property
+    def Name(self):
+        return self.name
+
+    @property
+    def Description(self):
+        return self.description
+
     def exit(self, direction): #command
         return self.exits.get(direction)
 
-    def take(self, item_name, player): #command
+    def take(self, item_name, playerObject): #command
         item_nam = item_name.lower()
 
         if self.name == "Ravenclaw Chamber" and item_nam == "diadem of wit":
-            if player:
+            if playerObject:
                 return ravenclaw_riddle(player)
             return False
 
