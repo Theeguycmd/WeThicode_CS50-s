@@ -1,7 +1,6 @@
 import validators
 import sys
 
-
 def main():
     if is_valid(input("What's your email address? ")):
         sys.exit("Valid")

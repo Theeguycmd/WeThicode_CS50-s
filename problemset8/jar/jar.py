@@ -1,7 +1,7 @@
 class Jar:
     def __init__(self, capacity=12):
         if capacity <= 0:
-            raise ValueError("Invalid jar capacity")
+            raise ValueError("Your jar should be able to hold atleast 1 cookie")
         self._capacity = capacity
         self._size = 0
 

@@ -10,7 +10,6 @@ def paste_image(back, final):
         with  Image.open(back) as backImage, Image.open("shirt.png") as shirt:
             backImage = backImage.convert("RGBA")
             shirt = shirt.convert("RGBA")
-        
             backImage.paste(shirt)
             backImage = backImage.convert("RGB")
             backImage.save(final)
